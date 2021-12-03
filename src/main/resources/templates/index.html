@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>掲示板ログイン画面</title>
+		<!-- 個別CSS読み込み -->
+		<link rel="stylesheet"th:href="@{/css/style.css}">
+	</head>
+	<body>
+	<form method="POST" action="/BBS/response">
+		<table>
+			<tbody>
+				<tr>
+					<th class="index_th_head" colspan="2">掲示板画面へログインする</th>
+				</tr>
+				<tr>
+					<td class="index_td_left">ユーザーID</td>
+					<td class="index_td_right">
+						<input type="text" size="20" name="userId" placeholder="admin" th:value="${userId_value}">
+					</td>
+				</tr>
+				<tr>
+					<td class="index_td_left">パスワード</td>
+					<td class="index_td_right">
+						<input type="text" size="20" name="password" placeholder="admin" th:value="${password_value}">
+					</td>
+				</tr>
+				<tr>
+					<td class="index_td_left"><!--  位置調整用。何も設定しない --></td>
+					<td class="index_td_submit"><input type="submit" value="送信"></td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+	</body>
+</html>

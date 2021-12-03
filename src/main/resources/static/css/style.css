@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+/* 共通で使用 */
+#errmsg {
+	margin-left: 10px;
+}
+
+textarea {
+	font-size: 13px;
+	font-family: Arial;
+}
+
+.th_head {
+	width: 450px;
+	height: 50px;
+	text-align: left;
+	padding-left: 30px;
+}
+
+.td_left {
+	width: 100px;
+	height: 50px;
+	text-align: left;
+	padding-left: 30px;
+}
+.td_right {
+	width: 350px;
+	height: 50px;
+	padding-right: 50px;
+	text-align: left;
+}
+.td_submit {
+	width: 350px;
+	height: 50px;
+	text-align: right;
+	padding-right: 50px;
+}
+
+/* index.htmlで使用 */
+.index_th_head {
+	width: 250px;
+	height: 50px;
+	text-align: left;
+}
+
+.index_td_left {
+	width: 100px;
+	height: 50px;
+	text-align: left;
+}
+.index_td_right {
+	width: 150px;
+	height: 50px;
+	text-align: left;
+}
+.index_td_submit {
+	width: 150px;
+	height: 50px;
+	text-align: right;
+}
+
+/* top.htmlに使用 */
+.top_tbl {
+	border: 1px solid black;
+	margin-left: 10px;
+	margin-bottom: 30px;
+}
+.message {
+	position: relative;
+	display: inline-block;
+	width: 800px; 
+	color:#FFF;
+	padding: 20px;
+	background-color: #f39800;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.message:before {
+	content: '';
+	position: absolute;
+	display: block;
+	z-index: 1;
+	border-style: solid;
+	border-color: transparent #f39800;
+	border-width: 10px 10px 10px 0;
+	top: 50%;
+	left: -10px;
+	margin-top: -10px;
+}
+.message p {
+	margin: 0;
+	padding: 0;
+}
+.message hr {
+	border-style: none;
+	border-top: 1px solid;
+	border-color:#FFF;
+}
+.message >.time_name {
+	text-align: right;
+}
+
+/* header.htmlで使用 */
+.header {
+	background-color: #dbedf0;
+}
+.navigation {
+	display: flex;
+	list-style: none;
+	justify-content: flex-end;
+}
+.navigation li {
+	margin: 20px;
+}
+.navigation input {
+	width: 60px;
+}
