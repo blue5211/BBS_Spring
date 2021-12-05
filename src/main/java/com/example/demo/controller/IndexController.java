@@ -14,11 +14,11 @@ public class IndexController {
 		return "index";
 	}
 	
-	@PostMapping("/BBS/response")
+	@PostMapping("/BBS/topLayout")
 	public String postIndex() {
-		//response.htmlに遷移
+		//top.htmlに遷移
 		//あとで認可の設定をしましょう。。。
-		return "BBS/response";
+		return "BBS/topLayout";
 	}
 
 }

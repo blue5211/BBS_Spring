@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.mz/thymeleaf/layout"
+	layout:decorate="={topLayout}">
+	<head>
+		<meta charset="UTF-8">
+		<title>掲示板ログイン画面</title>
+		<!-- 個別CSS読み込み -->
+		<link rel="stylesheet"th:href="@{/css/style.css}">
+	</head>
+	<body>
+		<div ld="layout" layout:fragment="top">
+			<form  method="POST">
+				<table class="top_tbl">
+					<tbody>
+						<tr>
+							<td class="td_left">名前</td>
+							<td class="td_right"><input type="text" size="30" name="name" required></td>
+						</tr>
+						<tr>
+							<td class="td_left">内容</td>
+							<td class="td_right"><textarea name="contents" rows="4" cols="50" required></textarea></td>
+						</tr>
+						<tr>
+							<td class="td_left"><input type="button" id="clear" value="クリア"></td>
+							<td class="td_submit"><input type="submit"value="送信"></td>
+						</tr>
+					</tbody>
+				</table>
+				<div id="errmsg"></div>
+				<article>
+					<div class="message">
+						<p class="contents">おためし</p>
+						<hr>
+						<p class="time_name">No.99 2099/99/99</p>
+					</div>
+				</article>
+				<input type="hidden" name="max_no" value="XX">
+			</form>
+		</div>
+	</body>
+</html>

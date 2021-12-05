@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>掲示板　－　削除画面</title>
+		<!-- 個別CSS読み込み -->
+		<link rel="stylesheet"th:href="@{/css/style.css}">
+	</head>
+	<body>
+		<div ld="layout" layout:fragment="delete">
+			<form method="POST" action="/BBS/deleteLayout">
+				<h1>以下内容を削除します。よろしいでしょうか？</h1><br>
+				<table>
+					<tbody>
+						<tr>
+							<td class="td_left">No.</td>
+							<td class="td_right"><output name="no">99</output></td>
+						</tr>
+						<tr>
+							<td class="td_left">日付</td>
+							<td class="td_right"><output name="date">9999/99/99</output></td>
+						</tr>
+						<tr>
+							<td class="td_left">名前</td>
+							<td class="td_right"><output name="name">XXXXXXX  </output></td>
+						</tr>
+						<tr>
+							<td class="td_left">内容</td>
+							<td class="td_right"><output name="contents">おためし</output></td>
+						</tr>
+						<tr>
+							<td class="td_left"><input type="button" id="cancel" value="キャンセル"></td>
+							<td class="td_submit"><input type="submit"value="削除"></td>
+						</tr>
+					</tbody>
+				</table>
+				<input type="hidden" name="delete_no" value="XX">
+				<div id="errmsg"></div>
+			</form>
+		</div>
+	</body>
+</html>

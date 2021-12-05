@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!-- 個別CSS読み込み -->
+		<link rel="stylesheet"th:href="@{/css/style.css}">
+	</head>
+	<body>
+		<!-- header.html -->
+		<nav layout:replace="~{BBS/common/header::header}"></nav>
+		<!-- top.html -->
+		<div layout:replace="~{BBS/common/top::top}"></div>
+	</body>
+</html>

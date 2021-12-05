@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>掲示板ログイン画面</title>
+		<!-- 個別CSS読み込み -->
+		<link rel="stylesheet"th:href="@{/css/style.css}">
+	</head>
+	<body>
+		<div ld="layout" layout:fragment="edit">
+			<form method="POST" action="/BBS/editLayout">
+				<h1>以下内容に編集します。よろしいでしょうか？</h1><br>
+				<table>
+					<tbody>
+						<tr>
+							<td class="td_left">No.</td>
+							<td class="td_right"><output name="no">99</output></td>
+						</tr>
+						<tr>
+							<td class="td_left">名前</td>
+							<td class="td_right"><input type="text" size="30" name="name" value="XXXXXXXXXX>"></td>
+						</tr>
+						<tr>
+							<td class="td_left">内容</td>
+							<td class="td_right"><textarea name="contents" rows="4" cols="50">XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</textarea></td>
+						</tr>
+						<tr>
+							<td class="td_left"><input type="button" id="cancel" value="キャンセル"></td>
+							<td class="td_submit"><input type="submit"value="編集"></td>
+						</tr>
+					</tbody>
+				</table>
+				<input type="hidden" name="edit_no" value="99">
+				<div id="errmsg"></div>
+			</form>
+		</div>
+	</body>
+</html>

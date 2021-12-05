@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<meta charset="UTF-8">
+		<!-- 個別CSS読み込み -->
+		<link rel="stylesheet" th:href="@{/css/user/list.css}">
+	</head>
+	<body>
+		<header class="header" layout:fragment="header">
+			<form method="POST">
+					<ul class="navigation">
+					<li>No. <input type="text" name="disp_no" required></li>
+					<li><input type="submit" value="編集" name="edit" formaction="/BBS/editHeader"></li>
+					<li><input type="submit" value="削除" name="delete" formaction="/BBS/deleteHeader"></li>
+				</ul>
+			</form>
+		</header>
+	</body>
+</html>
