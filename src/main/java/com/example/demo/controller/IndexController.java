@@ -1,12 +1,21 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.example.demo.mapper.MapperBBS;
+import com.example.demo.model.ModelBBS;
+
 @Controller
 public class IndexController {
-	
+
+	@Autowired
+	private MapperBBS mapper;
 	
 	@GetMapping("/index")
 	public String getIndex() {
@@ -15,9 +24,16 @@ public class IndexController {
 	}
 	
 	@PostMapping("/BBS/topLayout")
-	public String postIndex() {
-		//top.htmlに遷移
-		//あとで認可の設定をしましょう。。。
+	public String postIndex(Model model) {
+		//あとで認証の設定をしましょう。。。
+		
+		//ユーザー全件取得処理
+		List<ModelBBS> mBBSList = mapper.findAll();
+		
+		//Modelに登録
+		model.addAttribute("mBBSList", mBBSList);
+		
+		//topLayout.htmlに遷移
 		return "BBS/topLayout";
 	}
 

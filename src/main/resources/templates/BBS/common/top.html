@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div ld="layout" layout:fragment="top">
-			<form  method="POST">
+			<form  method="POST" action="/BBS/topLayout">
 				<table class="top_tbl">
 					<tbody>
 						<tr>
@@ -28,13 +28,17 @@
 				</table>
 				<div id="errmsg"></div>
 				<article>
-					<div class="message">
-						<p class="contents">おためし</p>
+					<div class="message" th:each="item, maxNo	: ${mBBSList}" th:object="${item}">
+						<p class="contents" th:text="${item.contents}"></p>
 						<hr>
-						<p class="time_name">No.99 2099/99/99</p>
+						<p class="time_name">
+							No.<span th:text="${item.no}"></span>　<span th:text=${item.name}></span>
+						</p>
+						<div th:if="${maxNo.last}">
+							<input type="hidden" name="max_no" th:value="${item.no}">
+						</div>
 					</div>
 				</article>
-				<input type="hidden" name="max_no" value="XX">
 			</form>
 		</div>
 	</body>
