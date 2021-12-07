@@ -14,7 +14,7 @@
 					<tbody th:object="${mBBS}">
 						<tr>
 							<td class="td_left">No.</td>
-							<td class="td_right"><output name="no" th:text="*{no}"></output></td>
+							<td class="td_right"><input type="text" name="no" th:field="*{no}" readonly></td>
 						</tr>
 						<tr>
 							<td class="td_left">名前</td>

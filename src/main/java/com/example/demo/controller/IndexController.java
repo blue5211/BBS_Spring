@@ -23,6 +23,7 @@ public class IndexController {
 		return "index";
 	}
 	
+	/** インデックス画面→トップ画面への遷移用 */
 	@PostMapping("/BBS/topLayout")
 	public String postIndex(Model model) {
 		//あとで認証の設定をしましょう。。。

@@ -14,15 +14,15 @@
 					<tbody th:object="${mBBS}">
 						<tr>
 							<td class="td_left">No.</td>
-							<td class="td_right"><output name="no" th:text="*{no}"></output></td>
+							<td class="td_right"><input type="text" name="no" th:field="*{no}" readonly></td>
 						</tr>
 						<tr>
 							<td class="td_left">名前</td>
-							<td class="td_right"><input type="text" size="30" name="name" th:value="*{name}"></td>
+							<td class="td_right"><input type="text" size="30" name="name" th:field="*{name}"></td>
 						</tr>
 						<tr>
 							<td class="td_left">内容</td>
-							<td class="td_right"><textarea name="contents" rows="4" cols="50" th:text="*{contents}"></textarea></td>
+							<td class="td_right"><textarea name="contents" rows="4" cols="50" th:field="*{contents}"></textarea></td>
 						</tr>
 						<tr>
 							<td class="td_left"><input type="button" id="cancel" value="キャンセル"></td>
