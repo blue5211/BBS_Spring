@@ -9,7 +9,10 @@ import com.example.demo.model.ModelBBS;
 @Mapper
 public interface MapperBBS {
 	
-	/** ユーザー全件取得 */
+	/** 全件取得 */
 	public List<ModelBBS> findAll();
+	
+	/** 1件取得 */
+	public ModelBBS findOne(int no);
 
 }

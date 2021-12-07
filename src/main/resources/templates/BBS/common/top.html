@@ -28,14 +28,14 @@
 				</table>
 				<div id="errmsg"></div>
 				<article>
-					<div class="message" th:each="item, maxNo	: ${mBBSList}" th:object="${item}">
+					<div class="message" th:each="item, newNo: ${mBBSList}" th:object="${item}">
 						<p class="contents" th:text="${item.contents}"></p>
 						<hr>
 						<p class="time_name">
 							No.<span th:text="${item.no}"></span>　<span th:text=${item.name}></span>
 						</p>
-						<div th:if="${maxNo.last}">
-							<input type="hidden" name="max_no" th:value="${item.no}">
+						<div th:if="${newNo.last}">
+							<input type="hidden" name="new_no" th:value="${item.no}+1">
 						</div>
 					</div>
 				</article>

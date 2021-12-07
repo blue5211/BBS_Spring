@@ -11,18 +11,18 @@
 			<form method="POST" action="/BBS/editLayout">
 				<h1>以下内容に編集します。よろしいでしょうか？</h1><br>
 				<table>
-					<tbody>
+					<tbody th:object="${mBBS}">
 						<tr>
 							<td class="td_left">No.</td>
-							<td class="td_right"><output name="no">99</output></td>
+							<td class="td_right"><output name="no" th:text="*{no}"></output></td>
 						</tr>
 						<tr>
 							<td class="td_left">名前</td>
-							<td class="td_right"><input type="text" size="30" name="name" value="XXXXXXXXXX>"></td>
+							<td class="td_right"><input type="text" size="30" name="name" th:value="*{name}"></td>
 						</tr>
 						<tr>
 							<td class="td_left">内容</td>
-							<td class="td_right"><textarea name="contents" rows="4" cols="50">XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</textarea></td>
+							<td class="td_right"><textarea name="contents" rows="4" cols="50" th:text="*{contents}"></textarea></td>
 						</tr>
 						<tr>
 							<td class="td_left"><input type="button" id="cancel" value="キャンセル"></td>

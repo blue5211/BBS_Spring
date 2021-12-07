@@ -4,7 +4,7 @@
 <!-- Mapperとxmlのマッピング -->
 <mapper namespace="com.example.demo.mapper.MapperBBS">
 
-	<!-- ユーザー全件取得 -->
+	<!-- 全件取得 -->
 	<select id="findAll" resultType="ModelBBS">
 		select
 			 *
@@ -12,5 +12,14 @@
 			bbs
 	</select>
 
+	<!-- 1件取得 -->
+	<select id="findOne" resultType="ModelBBS">
+		select
+			 *
+		from
+			bbs
+		where
+			no = #{no}
+	</select>
 
 </mapper>

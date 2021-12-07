@@ -11,22 +11,18 @@
 			<form method="POST" action="/BBS/deleteLayout">
 				<h1>以下内容を削除します。よろしいでしょうか？</h1><br>
 				<table>
-					<tbody>
+					<tbody th:object="${mBBS}">
 						<tr>
 							<td class="td_left">No.</td>
-							<td class="td_right"><output name="no">99</output></td>
-						</tr>
-						<tr>
-							<td class="td_left">日付</td>
-							<td class="td_right"><output name="date">9999/99/99</output></td>
+							<td class="td_right"><output name="no" th:text="*{no}"></output></td>
 						</tr>
 						<tr>
 							<td class="td_left">名前</td>
-							<td class="td_right"><output name="name">XXXXXXX  </output></td>
+							<td class="td_right"><output name="name" th:text="*{name}"></output></td>
 						</tr>
 						<tr>
 							<td class="td_left">内容</td>
-							<td class="td_right"><output name="contents">おためし</output></td>
+							<td class="td_right"><output name="contents" th:text="*{contents}"></output></td>
 						</tr>
 						<tr>
 							<td class="td_left"><input type="button" id="cancel" value="キャンセル"></td>

@@ -7,11 +7,11 @@
 	</head>
 	<body>
 		<header class="header" layout:fragment="header">
-			<form method="POST">
+			<form method="POST" action="/BBS/Header">
 					<ul class="navigation">
 					<li>No. <input type="text" name="disp_no" required></li>
-					<li><input type="submit" value="編集" name="edit" formaction="/BBS/editHeader"></li>
-					<li><input type="submit" value="削除" name="delete" formaction="/BBS/deleteHeader"></li>
+					<li><input type="submit" value="編集" name="edit"></li>
+					<li><input type="submit" value="削除" name="delete"></li>
 				</ul>
 			</form>
 		</header>
