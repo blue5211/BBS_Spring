@@ -1,5 +1,6 @@
 package com.example.demo.mapper;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
@@ -22,4 +23,7 @@ public interface MapperBBS {
 	/** 1件削除 */
 	public int deleteOne(@Param("no")int no);
 	
+	/** 1件登録 */
+	public void insertOne(@Param("no")int no, @Param("date")Date date, @Param("name")String name,
+			@Param("contents")String contents);
 }

@@ -31,13 +31,12 @@ public class HeaderController {
 	
 	@PostMapping(value = "/Header", params = "edit")
 	public String postEditHeader(@RequestParam("disp_no")int no, Model model) {
-	
 		//ユーザー1件取得処理
 		ModelBBS mBBS = mapper.findOne(no);
-		
+
 		//Modelに登録
 		model.addAttribute("mBBS", mBBS);
-
+		
 		//editLayout.htmlに遷移
 		return "BBS/editLayout";
 	}

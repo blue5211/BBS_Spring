@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<header class="header" layout:fragment="header">
-			<form method="POST" action="/BBS/Header">
+			<form method="POST" name="disp_form" action="/BBS/Header" onSubmit="return check()">
 					<ul class="navigation">
 					<li>No. <input type="text" name="disp_no" required></li>
 					<li><input type="submit" value="編集" name="edit"></li>

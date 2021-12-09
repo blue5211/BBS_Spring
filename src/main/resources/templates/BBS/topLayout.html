@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>掲示板トップ画面</title>
 		<!-- 個別CSS読み込み -->
 		<link rel="stylesheet"th:href="@{/css/style.css}">
 	</head>
@@ -12,4 +12,6 @@
 		<!-- top.html -->
 		<div layout:replace="~{BBS/common/top::top}"></div>
 	</body>
+	<!-- 個別JS読み込み -->
+	<script type="text/javascript" th:src="@{/js/script.js}"></script>
 </html>

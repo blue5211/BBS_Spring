@@ -41,4 +41,21 @@
 			no = #{no}
 	</delete>
 
+	<!-- 1件登録 -->
+	<insert id="insertOne">
+		insert into bbs(
+			no,
+			date,
+			name,
+			contents
+		)
+		values(
+			#{no},
+			#{date},
+			#{name},
+			#{contents}
+		)
+	</insert>
+
+
 </mapper>

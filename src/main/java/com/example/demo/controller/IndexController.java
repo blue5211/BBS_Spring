@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,8 +32,13 @@ public class IndexController {
 		//ユーザー全件取得処理
 		List<ModelBBS> mBBSList = mapper.findAll();
 		
+		//現在日付を取得
+		long miliseconds = System.currentTimeMillis();
+		Date nowDate = new Date(miliseconds);
+		
 		//Modelに登録
 		model.addAttribute("mBBSList", mBBSList);
+		model.addAttribute("nowDate", nowDate);
 		
 		//topLayout.htmlに遷移
 		return "BBS/topLayout";
